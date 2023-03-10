@@ -124,7 +124,7 @@ export async function build (opts: BuildOptions & { config: NuxtBuilderConfig })
     '--production=false',
     `--modules-folder=${modulesPath}`,
     `--cache-folder=${yarnCachePath}`
-  ], { ...spawnOpts, env: { ...spawnOpts.env, NODE_ENV: 'development' } }, meta)
+  ], { ...spawnOpts, env: { ...spawnOpts.env, NODE_ENV: 'development' } }, meta, nodeVersion)
 
   // ----------------- Pre build -----------------
   const buildSteps = ['vercel-build', 'now-build']
